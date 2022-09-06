@@ -154,7 +154,7 @@ class HomeScreen extends StatelessWidget {
                         color: Color.fromARGB(255, 206, 206, 206)),
                   ),
                   Text(
-                    'Wind ${controller.list[0].current.windKph}/hr \n\nDirection < ${controller.list[0].current.windDir}',
+                    'Wind ${controller.list[0].current.windKph}/kph \n\nDirection < ${controller.list[0].current.windDir}',
                     style: TextStyle(
                         fontSize: 14,
                         color: Color.fromARGB(255, 206, 206, 206)),
