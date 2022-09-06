@@ -6,7 +6,7 @@ import 'package:weather_app/models/weather_model.dart' as DataModel;
 class HomeController extends GetxController {
   var latitude = 0.0.obs;
   var longitude = 0.0.obs;
-  var isLoading = false.obs;
+  var isLoading = true.obs;
   var list = List<DataModel.WeatherModel>.empty().obs;
   @override
   void onInit() {
@@ -49,6 +49,7 @@ class HomeController extends GetxController {
     var fetchData = await ApiService.getWeatherData(latitude, longitude);
     if (fetchData != null) {
       list.assign(fetchData);
+      isLoading.value = false;
     }
     print("Weather Data Response -> ${list[0].location.name}");
   }
