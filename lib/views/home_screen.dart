@@ -5,11 +5,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:weather_app/controllers/home_controller.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends GetView<HomeController> {
   const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var controller = Get.find<HomeController>();
+    //var controller = Get.find<HomeController>();
 
     return Scaffold(
       appBar: AppBar(
